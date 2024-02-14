@@ -1,0 +1,51 @@
+.container {
+    width: 540px;
+    margin: 40px auto;
+    overflow: auto;
+  }
+  
+  .slider-inner {
+    height: 500px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    padding: 3px;
+  }
+  
+  .slider-inner img {
+    display: none;
+    width: 100%;
+  }
+  
+  .slider-inner img.active {
+    display: inline-block;
+  }
+
+  .container p {
+    display: none;
+  }
+  .container p.active-text {
+    display: inline-block;
+  }
+  
+  .prev,.next {
+    float: left;
+    margin-top: 530px;
+    cursor: pointer;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .prev {
+    position: relative;
+    margin-right: -45px;
+    z-index: 100;
+  }
+  
+  .next {
+    position: relative;
+    margin-left: -45px;
+    z-index: 100;
+  }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  <title>V-Day</title>
+  <link rel="icon" type="image.png" href="./icons/heart.png" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/classes.css" />
+  <link rel="stylesheet" href="./css/carousel.css" />
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <div id="grad">
+    <div id="cards-container" class="blur">
+      <div class="card" id="picture-card">
+        <h1>Ale's favorite memories</h1>
+        <div id="polaroids-container">
+          <img class="img" class="polaroids" src="./icons/polaroids.jpg" />
+        </div>
+      </div>
+      <div class="card" id="poem-card">
+        <h2>Forever</h2>
+        <p>
+          When forever was a sentence, sentence to death<br />
+          Oh, when you were a running tear, I was a drop of sweat<br />
+          And the edges of your soul, I haven't seen yet<br />
+          Now I'm glad I get forever to see where you end<br />
+          To see where you end
+        </p>
+        <div id="hands-container">
+          <img class="img" src="./images/hands.png" />
+        </div>
+      </div>
+
+      <div class="card" id="video-card">
+        <a href="https://youtu.be/JI895BXhRwk" target="_blank">
+          <div id="video-container">
+            <img class="img" src="./icons/video.png" />
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container" id="memories-container">
+      <div class="x-heart-container" id="x-heart-container1">
+        <img
+          class="img"
+          class="x-heart"
+          src="./icons/multiply-heart-icon-png.webp"
+        />
+      </div>
+      <div class="text-slider-outer">
+        <p class="active-text">When you sent me updates on your Vegas trip</p>
+        <p>Prom!</p>
+        <p>Our first D&B outing</p>
+        <p>Ahhh Seussland. Take me back</p>
+        <p>When I pranked you!</p>
+        <p>Karaoke nights and exploring together</p>
+        <p>Round 2! I love seeing the lights with you</p>
+        <p>And I love sitting under lights with you too!</p>
+      </div>
+      <div class="slider-outer">
+        <img src="icons/left-arrow.png" class="prev" alt="Prev" />
+        <div class="slider-inner">
+          <img src="images/vegas.JPG" class="active" />
+          <img src="images/prom.JPG" />
+          <img src="images/picnic.jpg" />
+          <img src="images/universal.JPG" />
+          <img src="images/santa.JPG" />
+          <img src="images/cruise.JPG" />
+          <img src="images/santa2.JPG" />
+          <img src="images/lights.jpg" />
+        </div>
+        <img src="icons/right-arrow.png" class="next" alt="Next" />
+      </div>
+    </div>
+
+    <div id="gif-container">
+      <div class="x-heart-container" id="x-heart-container2">
+        <img
+          class="img"
+          class="x-heart"
+          src="./icons/multiply-heart-icon-png.webp"
+        />
+      </div>
+      <img class="img" id="kisses-gif" src="./gif/kisses.gif" />
+    </div>
+  </div>
+</body>
