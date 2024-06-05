@@ -11,107 +11,87 @@ a {
 #grad {
   height: 100vh;
   width: 100vw;
-  background: radial-gradient(ellipse at top, #ff2b2b, #ff8e8e),
-    radial-gradient(ellipse at bottom, #ff6e6e, #ff8e8e);
+  background: radial-gradient(ellipse at top, #815eff, #c0bcff),
+    radial-gradient(ellipse at bottom, #c0bcff, #c4c0ff);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#cards-container {
-  height: 70vh;
-  width: 80vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#picture-card {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+.envelope {
   position: relative;
+  width: 300px;
+  height: 200px;
 }
 
-#polaroids-container {
-  height: 30%;
+.triangle {
   position: absolute;
-  bottom: 10%;
-  overflow: hidden;
-  border-radius: 7%;
-  transition: 1.0s;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;  
 }
-#polaroids-container:hover {
-  cursor: pointer;
-  box-shadow: 5px 7px 2px 1px rgba(0, 0, 255, 0.2);
-  transition: 0.1s;
-}
-
-#memories-container {
-  height: 90vh;
-  width: 35vw;
-  position: absolute;
+#flap {
+  border-top: 150px solid #f1c40f;
+  top: 45px;
   z-index: 100;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 7px 10px 2px 1px rgba(0, 0, 255, 0.2);
+
+}
+#shadow {
+  top: 49px;
+  border-top: 150px solid rgb(217, 178, 3);
+  border-bottom: 150px solid transparent;
+}
+
+.pocket {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 150px;
+  background-color: rgb(254, 207, 0);
+  border-top: 5px solid rgb(217, 178, 3);
+}
+
+.image-wrapper {
+  position: absolute;
+  width: 160px;
+  height: 260px;
+  left: 70px;
+  top: -150px;
+  transform-origin: center center; /* Ensure scaling and translation origin is at the center */
+  
+  transform: scale(0.5) translate(0px, 275px);
+  transition: 1s;
+  /* ^ Adjust scale and translate values */
+}
+.image-wrapper.animate {
+  transform: scale(1) translate(0px, 0px);
+}
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 80px / 130px; /* This creates an oval shape */
+}
+#otter {
+  width: 306px;
+  height: 306px;
+  object-fit: cover;
+  transform: translateX(-73px) translateY(-25px); /* Center the image inside the oval */
+}
+
+#msg-container {
   display: none;
 }
-
-#poem-card{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  position: relative;
-  padding: 25px 15px 25px 15px;
-}
-
-#hands-container {
-  height: 30%;
+#bubble {
   position: absolute;
-  bottom: 12%;
-  overflow: hidden;
+  top: -165px;
+  left: 170px;
+  width: 115px;
 }
 
-#video-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  position: relative;
-}
-
-#video-container {
-  height: 30%;
-  overflow: hidden;
-  border-radius: 50%;
-  background-color: white;
-  padding: 20px;
-  transition: 1.0s;
-}
-#video-container:hover {
-  cursor: pointer;
-  box-shadow: 5px 7px 2px 1px rgba(0, 0, 255, 0.2);
-  transition: 0.1s;
-}
-
-#gif-container {
-  height: 80vh;
-  width: 40vw;
-  background-color: white;
-  position: fixed;
-  border-radius: 6px;
-  z-index: 50;
-}
-.blur {
-  height: 100vh;
-  width: 100vw;
-  z-index: 25;
-  position: fixed;
-  filter: blur(6px);
+.confetti {
+  display: none;
 }

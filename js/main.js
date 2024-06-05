@@ -1,56 +1,31 @@
 $(document).ready(ready = () => {
-    //Carousel
-    $('.next').on('click', next = () => {
-        let currentImg = $('.active')
-        let nextImg = currentImg.next()
+    console.log('ready')
+    $('.envelope').on('click', async function () {
+        $('#flap').css({
+            'border-bottom': '150px solid rgb(254, 207, 0)',
+            'border-top': '150px solid transparent',
+            'top': '-254px',
+            'z-index': 0
+        })
+        $('.confetti').css({
+            'display': 'inline'
+        })
+        $('.image-wrapper').addClass('animate')
 
-        if(nextImg.length) {
-            currentImg.removeClass('active').css('z-index', -10)
-            nextImg.addClass('active').css('z-index', 10)
-        }
+        await new Promise(resolve => setTimeout(resolve, 1500))
+        console.log('waited')
+        $('#msg-container').css({
+            'display': 'inline'
+        })
 
-        let currentTxt = $('.active-text')
-        let nextTxt = currentTxt.next()
+        await new Promise(resolve => setTimeout(resolve, 1000))
+        $('.confetti').css({
+            'display': 'none'
+        })
 
-        if(nextTxt.length) {
-            currentTxt.removeClass('active-text').css('z-index', -10)
-            nextTxt.addClass('active-text').css('z-index', 10)
-        }
+        await new Promise(resolve => setTimeout(resolve, 400))
+        $('#msg').css({
+            'display': 'inline'
+        })
     })
-
-    $('.prev').on('click', prev = () => {
-        let currentImg = $('.active')
-        let prevImg = currentImg.prev()
-
-        if(prevImg.length) {
-            currentImg.removeClass('active').css('z-index', -10)
-            prevImg.addClass('active').css('z-index', 10)
-        }
-
-        let currentTxt = $('.active-text')
-        let prevTxt = currentTxt.prev()
-
-        if(prevTxt.length) {
-            console.log(prevTxt.length)
-            currentTxt.removeClass('active-text').css('z-index', -10)
-            prevTxt.addClass('active-text').css('z-index', 10)
-        }
-    })
-    
-    //Close out
-    $('#x-heart-container1').on('click', close = () => {
-        $('#memories-container').css('display', 'none')
-    })
-
-    //Open up
-    $('#polaroids-container').on('click', open = () => {
-        $('#memories-container').css('display', 'flex')
-    })
-
-    //gif close out
-    $('#x-heart-container2').on('click', close = () => {
-        $('#gif-container').css('display', 'none')
-        $('#cards-container').removeClass('blur')
-    })
-
 })
